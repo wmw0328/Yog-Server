@@ -10,10 +10,19 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>yog-service</artifactId>
+    <artifactId>yog-web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>yog-service</name>
+    <name>yog-web</name>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.wmw</groupId>
+            <artifactId>yog-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
+    </dependencies>
 
     <build>
         <plugins>

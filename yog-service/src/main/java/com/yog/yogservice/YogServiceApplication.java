@@ -7,7 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class YogServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(YogServiceApplication.class, args);
+        try {
+            SpringApplication.run(YogServiceApplication.class, args);
+        }catch (Throwable e){
+            e.printStackTrace();
+        }
     }
 
 }

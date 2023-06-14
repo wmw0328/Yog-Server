@@ -1,30 +1,47 @@
-# 开发环境配置
 server:
-  port: 8088
+  port: 8099
   servlet:
     # 应用的访问路径
     context-path: /
+  tomcat:
+    # tomcat的URI编码
+    uri-encoding: UTF-8
 
+dubbo:
+  consumer:
+    check: false
+  protocol:
+    payload: 83886080
 # 日志配置
 logging:
   level:
     com.nbport: debug
-    org.springframework: warn
+    org.springframework: info
 
 # Spring配置
 spring:
   application:
-    name: yog-service
+    name: yog-web
+
+  profiles:
+    active: dev
+  # 文件上传
+  servlet:
+    multipart:
+      # 单个文件大小
+      max-file-size: 10MB
+      # 设置总上传的文件大小
+      max-request-size: 20MB
+  # 服务模块
+  devtools:
+    restart:
+      # 热部署开关
+      enabled: true
   jackson:
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
-  profiles:
-    active: dev
-    # 服务模块
-    devtools:
-      restart:
-        # 热部署开关
-        enabled: true
+
+  # redis 配置
   redis:
     # 地址
     host: 169.169.171.40
@@ -43,12 +60,3 @@ spring:
         # #连接池最大阻塞等待时间（使用负值表示没有限制）
         max-wait: -1ms
 
-dubbo:
-  protocol:
-    port: 20911
-    name: dubbo
-    payload: 83886080
-  provider:
-    timeout: 200000
-    retries: 0
-    filter: exceptionFilter,-exception
