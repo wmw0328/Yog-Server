@@ -1,0 +1,19 @@
+server:
+  port: 8888 #项目端口
+
+spring:
+  application:
+    name: yog-service #项目名称
+  profiles:
+    active: dev
+
+dubbo: # dubbo配置
+  application:
+    name: yog-service # dubbo服务名称
+  protocol:
+    port: 20880 # dubbo服务端口
+    name: dubbo # dubbo服务协议名称
+
+
+
+
