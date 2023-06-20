@@ -27,8 +27,9 @@
         <spring.version>2.7.11</spring.version>
         <lombok.version>1.18.28</lombok.version>
         <dubbo.version>3.1.8</dubbo.version>
-        <mysql.version>8.0.29</mysql.version>
-        <mybatis.plus.version>3.5.2</mybatis.plus.version>
+        <mysql.version>8.0.33</mysql.version>
+        <mybatis.plus.version>3.5.3.1</mybatis.plus.version>
+        <swagger.version>3.0.0</swagger.version>
 
     </properties>
 
@@ -83,6 +84,7 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>${mybatis.plus.version}</version>
         </dependency>
+
 
 
     </dependencies>
