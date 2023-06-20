@@ -13,8 +13,7 @@ dubbo: # dubbo配置
   protocol:
     port: 20880 # dubbo服务端口
     name: dubbo # dubbo服务协议名称
-  registry: # dubbo使用的注册中心
-    address: nacos://127.0.0.1:8848 # dubbo注册中心地址
+
 
 
 
