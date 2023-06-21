@@ -19,6 +19,7 @@
         <module>yog-service</module>
         <module>yog-web</module>
         <module>yog-api</module>
+        <module>yog-common</module>
     </modules>
 
 
@@ -30,6 +31,7 @@
         <mysql.version>8.0.33</mysql.version>
         <mybatis.plus.version>3.5.3.1</mybatis.plus.version>
         <swagger.version>3.0.0</swagger.version>
+        <redis.version>3.1.0</redis.version>
 
     </properties>
 
@@ -85,7 +87,12 @@
             <version>${mybatis.plus.version}</version>
         </dependency>
 
-
+        <!-- redis -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <version>${redis.version}</version>
+        </dependency>
 
     </dependencies>
 
